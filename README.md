@@ -114,10 +114,10 @@ uv run kedro airflow create -t dags/
 Install the astro CLI:
 ```bash
 curl -sSL install.astronomer.io | sudo bash -s -- v1.32.1
-astro config set container.binary docker -g
+uv run tool astro config set container.binary docker -g
 ```
 
 Run your local Airflow instance through Astronomer:
 ```shell
-astro dev start
+uv run tool astro dev start
 ```
