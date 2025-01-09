@@ -10,7 +10,7 @@ def create_pipeline(**kwargs) -> Pipeline:
                 name="sql_dump",
                 func=sql_dump,
                 inputs=None,
-                outputs="landing.namespace_1.sql_dump",
+                outputs="landing.sql_dump",
             ),
             node(
                 name="example_source",

@@ -78,7 +78,7 @@ with DAG(
             task_id="sql-dump-none-landing-namespace-1-sql-dump",
             package_name=package_name,
             pipeline_name=pipeline_name,
-            node_name="sql_dump(None) -> [landing.namespace_1.sql_dump]",
+            node_name="sql_dump(None) -> [landing.sql_dump]",
             project_path=project_path,
             env=env,
             conf_source=conf_source,

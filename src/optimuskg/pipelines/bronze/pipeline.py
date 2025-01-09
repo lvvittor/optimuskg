@@ -14,8 +14,8 @@ def create_pipeline(**kwargs) -> Pipeline:
             node(
                 name="sql_dump_csv",
                 func=sql_dump_csv,
-                inputs="landing.namespace_1.sql_dump",
-                outputs="bronze.namespace_1.sql_dump_csv",
+                inputs="landing.sql_dump",
+                outputs="bronze.sql_dump_csv",
             ),
         ]
     )
