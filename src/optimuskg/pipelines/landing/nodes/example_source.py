@@ -4,8 +4,8 @@ logger = logging.getLogger(__name__)
 
 
 def example_source() -> dict[str, str]:
-    """Retrieves the raw data from the source 2."""
+    """Retrieves the raw data from the source."""
 
-    # TODO: Implement the logic to retrieve the data from the source 2
-    logger.debug("Data retrieved from source 2.")
-    return {"source_2": "data"}
+    # TODO: Implement this
+    logger.debug("Data retrieved.")
+    return {"example_source": "data"}

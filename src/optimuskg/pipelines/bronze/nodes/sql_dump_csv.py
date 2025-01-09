@@ -3,7 +3,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-def example_source() -> dict[str, str]:
+def sql_dump_csv(sql_dump: dict) -> dict[str, str]:
     """Parse the sql_dump landing data to csv format."""
 
     # TODO: Implement this

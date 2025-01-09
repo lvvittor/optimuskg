@@ -1,0 +1,19 @@
+landing.sql_dump:
+  type: pickle.PickleDataset
+  filepath: data/landing/sql_dump.pkl
+
+landing.example_source:
+  type: pickle.PickleDataset
+  filepath: data/landing/example_source.pkl
+
+bronze.sql_dump_csv:
+  type: pickle.PickleDataset
+  filepath: data/bronze/sql_dump_csv.pkl
+
+bronze.example_source:
+  type: pickle.PickleDataset
+  filepath: data/bronze/example_source.pkl
+
+
+
+

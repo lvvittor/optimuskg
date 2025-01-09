@@ -8,15 +8,17 @@ def create_pipeline(**kwargs) -> Pipeline:
         [
             node(
                 name="sql_dump",
+                tags="landing",
                 func=sql_dump,
                 inputs=None,
                 outputs="landing.sql_dump",
             ),
             node(
                 name="example_source",
+                tags="landing",
                 func=example_source,
                 inputs=None,
-                outputs="landing.namespace_2.example_source",
+                outputs="landing.example_source",
             ),
         ]
     )

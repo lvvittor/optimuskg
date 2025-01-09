@@ -13,6 +13,7 @@ def create_pipeline(**kwargs) -> Pipeline:
         [
             node(
                 name="sql_dump_csv",
+                tags="landing",
                 func=sql_dump_csv,
                 inputs="landing.sql_dump",
                 outputs="bronze.sql_dump_csv",

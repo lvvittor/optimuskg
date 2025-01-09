@@ -65,23 +65,33 @@ with DAG(
     )
 ) as dag:
     tasks = {
-        "example-source-none-landing-namespace-2-example-source": KedroOperator(
-            task_id="example-source-none-landing-namespace-2-example-source",
+        "example-source": KedroOperator(
+            task_id="example-source",
             package_name=package_name,
             pipeline_name=pipeline_name,
-            node_name="example_source(None) -> [landing.namespace_2.example_source]",
+            node_name="example_source",
             project_path=project_path,
             env=env,
             conf_source=conf_source,
         ),
-        "sql-dump-none-landing-namespace-1-sql-dump": KedroOperator(
-            task_id="sql-dump-none-landing-namespace-1-sql-dump",
+        "sql-dump": KedroOperator(
+            task_id="sql-dump",
             package_name=package_name,
             pipeline_name=pipeline_name,
-            node_name="sql_dump(None) -> [landing.sql_dump]",
+            node_name="sql_dump",
+            project_path=project_path,
+            env=env,
+            conf_source=conf_source,
+        ),
+        "sql-dump-csv": KedroOperator(
+            task_id="sql-dump-csv",
+            package_name=package_name,
+            pipeline_name=pipeline_name,
+            node_name="sql_dump_csv",
             project_path=project_path,
             env=env,
             conf_source=conf_source,
         ),
     }
 
+    tasks["sql-dump"] >> tasks["sql-dump-csv"]
