@@ -1777,6 +1777,7 @@ dependencies = [
     { name = "kedro-datasets", version = "6.0.0", source = { registry = "https://pypi.org/simple" }, extra = ["pandas-csvdataset"], marker = "python_full_version >= '3.10'" },
     { name = "notebook" },
     { name = "obonet" },
+    { name = "pandas" },
     { name = "result" },
     { name = "ruff" },
 ]
@@ -1817,6 +1818,7 @@ requires-dist = [
     { name = "nbsphinx", marker = "extra == 'docs'", specifier = "==0.8.1" },
     { name = "notebook" },
     { name = "obonet", specifier = ">=1.1.0" },
+    { name = "pandas", specifier = ">=2.2.3" },
     { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=4.0.1" },
     { name = "pytest", marker = "extra == 'dev'", specifier = "~=7.2" },
     { name = "pytest-cov", marker = "extra == 'dev'", specifier = "~=3.0" },

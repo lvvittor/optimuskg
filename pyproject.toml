@@ -19,6 +19,7 @@ dependencies = [
     "goatools>=1.4.12",
     "result>=0.17.0",
     "ruff>=0.1.15",
+    "pandas>=2.2.3",
 ]
 
 [project.scripts]

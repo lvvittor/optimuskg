@@ -74,15 +74,6 @@ with DAG(
             env=env,
             conf_source=conf_source,
         ),
-        "split": KedroOperator(
-            task_id="split",
-            package_name=package_name,
-            pipeline_name=pipeline_name,
-            node_name="split",
-            project_path=project_path,
-            env=env,
-            conf_source=conf_source,
-        ),
         "sql-dump-none-landing-namespace-1-sql-dump": KedroOperator(
             task_id="sql-dump-none-landing-namespace-1-sql-dump",
             package_name=package_name,

@@ -65,10 +65,6 @@ To automatically strip out all output cell contents before committing to `git`, 
 
 > *Note:* Your output cells will be retained locally.
 
-## Package your Kedro project
-
-[Further information about building project documentation and packaging your project](https://docs.kedro.org/en/stable/tutorial/package_a_project.html)
-
 ## Run your project in Airflow
 
 The easiest way to run your project in Airflow is by [installing the Astronomer CLI](https://www.astronomer.io/docs/cloud/stable/get-started/quickstart#step-4-install-the-astronomer-cli)
