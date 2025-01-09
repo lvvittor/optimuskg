@@ -53,6 +53,13 @@ You can also start JupyterLab:
 uv run kedro jupyter lab
 ```
 
+### Format
+You can also format the code using ruff:
+
+```
+uv tool run ruff format
+```
+
 ### How to ignore notebook output cells in `git`
 To automatically strip out all output cell contents before committing to `git`, you can use tools like [`nbstripout`](https://github.com/kynan/nbstripout). For example, you can add a hook in `.git/config` with `nbstripout --install`. This will run `nbstripout` before anything is committed to `git`.
 
@@ -70,12 +77,6 @@ and follow the following instructions:
 Package your project:
 ```shell
 uv run kedro package
-```
-
-Copy the package at the root of the project such that the Docker images 
-created by the Astronomer CLI can pick it up:
-```shell
-cp src/dist/*.whl ./
 ```
 
 Generate a catalog file with placeholders for all the in-memory datasets:
@@ -114,10 +115,15 @@ uv run kedro airflow create -t dags/
 Install the astro CLI:
 ```bash
 curl -sSL install.astronomer.io | sudo bash -s -- v1.32.1
-uv run tool astro config set container.binary docker -g
+uv tool run astro config set container.binary docker -g
 ```
 
 Run your local Airflow instance through Astronomer:
 ```shell
-uv run tool astro dev start
+uv tool run astro dev start
+```
+
+And stop the instance by doing:
+```shell
+uv tool run astro dev stop
 ```
